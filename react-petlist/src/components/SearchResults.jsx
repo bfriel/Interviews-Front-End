@@ -4,7 +4,13 @@ const SearchResults = React.createClass({
 
   render(){
     return(
-      <div>Search Results</div>
+      <ul>
+        {
+          this.props.vacays.map( item => {
+            return (<li key={item.title}>{item.title}</li>);
+          })
+        }
+      </ul>
     );
   }
 });
