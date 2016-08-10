@@ -2,7 +2,7 @@ const React = require('react'),
       ReactDOM = require('react-dom'),
       Test = require('components/Test'),
       SearchFilters = require('components/SearchFilters.jsx'),
-      SearchResults = require('components/SearchResults.jsx'),
+      ResultsIndex = require('components/ResultsIndex.jsx'),
       VacayUtil = require('utils/vacay_util'),
       VacayStore = require('stores/vacay_store'),
       dist = document.getElementById('content');
@@ -27,7 +27,7 @@ const App = React.createClass({
     return (
       <div>
         <SearchFilters />
-        <SearchResults vacays={this.state.vacays} />
+        <ResultsIndex vacays={this.state.vacays} />
       </div>
     );
   }
