@@ -4,7 +4,7 @@ const SearchFilters = React.createClass({
 
   render(){
     return(
-      <div>Search Filters</div>
+      <div className="filters-container">Search Filters</div>
     );
   }
 });

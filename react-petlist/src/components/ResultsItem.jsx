@@ -4,18 +4,15 @@ const ResultsItem = React.createClass({
   render() {
     const vacay = this.props.vacay;
     return(
-      <div>
-        <div>
+      <div className="results-item">
+        <div className="results-item-title">
           {vacay.title}
         </div>
-        <div>
+        <div className="results-item-user">
+          {vacay.user.first} {vacay.user.last} | {vacay.pet.name}
+        </div>
+        <div className="results-item-description">
           {vacay.description}
-        </div>
-        <div>
-          {vacay.user.first} {vacay.user.last}
-        </div>
-        <div>
-          {vacay.pet.first} {vacay.pet.last}
         </div>
       </div>
     );

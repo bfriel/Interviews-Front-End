@@ -7,7 +7,7 @@ const ResultsIndex = React.createClass({
     const vacays = this.props.vacays;
     const vacayKeys = Object.keys(vacays);
     return(
-      <div>
+      <div className="results-index">
         {
           vacayKeys.map( key => {
             return <ResultsItem vacay={vacays[key]} key={key} />;

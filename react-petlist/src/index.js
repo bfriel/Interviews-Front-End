@@ -5,6 +5,7 @@ const React = require('react'),
       ResultsIndex = require('components/ResultsIndex.jsx'),
       VacayUtil = require('utils/vacay_util'),
       VacayStore = require('stores/vacay_store'),
+      CSS = require('./index.scss'),
       dist = document.getElementById('content');
 
 const App = React.createClass({
@@ -25,7 +26,7 @@ const App = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="app-container">
         <SearchFilters />
         <ResultsIndex vacays={this.state.vacays} />
       </div>
