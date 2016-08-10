@@ -11,6 +11,41 @@ body {
 .filters-container {
   padding: 10px;
   border-bottom: 1px solid rgb(224, 228, 228);
+  position: relative;
+}
+
+.filter-header {
+  display: inline-block;
+  position: absolute;
+  top: 10;
+  left: 10;
+}
+
+.filter-option {
+  display: inline-block;
+  margin-left: 120px;
+}
+
+.filter-title, .click-state {
+  padding: 5px;
+  border: 2px solid rgb(102, 187, 192);
+  border-radius: 6%;
+  display: block;
+}
+
+.filter-title:hover, .click-state:hover {
+  cursor: pointer;
+}
+
+.click-state {
+  background: rgb(99, 187, 192);
+  color: white;
+}
+
+.filter-description {
+  color: rgb(145, 145, 145);
+  font-size: 12px;
+  font-style: italic;
 }
 
 .results-item {

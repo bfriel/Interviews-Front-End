@@ -11,7 +11,7 @@ VacayStore.all = function () {
 
 VacayStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
-    case "VACAYS_RECEIVED":
+    case "UPDATE_VACAYS":
       _vacays = payload.vacays.search;
       VacayStore.__emitChange();
       break;
