@@ -1,19 +1,22 @@
-const React = require('react');
+const React = require('react'),
+      Format = require('../utils/format');
 
 const ResultsItem = React.createClass({
   render() {
     const vacay = this.props.vacay;
     return(
       <div className="results-item">
-        <div className="results-item-title">
-          {vacay.title}
-        </div>
-        <div className="results-item-user">
-          {vacay.user.first} {vacay.user.last} | {vacay.pet.name}
-        </div>
-        <div className="results-item-description">
-          {vacay.description}
-        </div>
+        <h2 className="results-item-title">
+          {Format.capitalize(vacay.title)}
+        </h2>
+        <h3 className="results-item-user">
+          {Format.formatUsername(vacay.user.first, vacay.user.last)}
+          {' '} | {' '}
+          {Format.capitalize(vacay.pet.name)}
+        </h3>
+        <p className="results-item-description">
+          {Format.shortenDescription(vacay.description, 48)}
+        </p>
       </div>
     );
   }
