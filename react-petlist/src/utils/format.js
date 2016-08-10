@@ -26,5 +26,11 @@ module.exports = {
       }
     }
     return description;
+  },
+
+  formatURL(title) {
+    return title.replace("'", "")
+    .replace(/[^a-zA-Z0-9]/g, "-")
+    .replace(/(\-)\1+/g, "-");
   }
 };
